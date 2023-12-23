@@ -1,19 +1,21 @@
 import { NavItems } from "@/types/types";
+import Nav from "../nav/topNav/Nav";
 
 const pageNavigation: NavItems[] = [
     {
         title: 'Lucas Sobczak',
-        link: '../../../app/page.tsx'
+        link: '/'
     },
     {
         title: 'Contact',
-        link: '../../../app/pages/contact/page.tsx'
+        link: '/contact'
     },
 ]
 
 export default function Header(){
     return(
-        <>
-        </>
+        <Nav 
+         navItems={pageNavigation}
+         /> 
     )
 }
