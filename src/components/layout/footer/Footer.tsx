@@ -4,15 +4,15 @@ import { NavItems } from "@/types/types";
 const pageNavigation: NavItems[] = [
     {
         title: 'About',
-        link: '../../../app/pages/about/page.tsx'
+        link: '/about'
     },
     {
         title: 'Projects',
-        link: '../../../app/pages/projects/page.tsx'
+        link: '/projects'
     },
     {
         title: 'Contact',
-        link: '../../../app/pages/contact/page.tsx'
+        link: '/contact'
     },
 ]
 
