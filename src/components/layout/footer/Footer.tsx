@@ -18,8 +18,10 @@ const pageNavigation: NavItems[] = [
 
 export default function Footer(){
     return(
-       <Nav 
-        navItems={pageNavigation}
-        /> 
+        <footer className="flex-shrink-0 text-black">
+            <Nav 
+                navItems={pageNavigation}
+            /> 
+        </footer>
     )
 }

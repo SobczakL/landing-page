@@ -36,6 +36,8 @@ const config: Config = {
                 labelSm: '14px',
                 labelMd: '18px',
                 labelLg: '24px',
+                subLabelSm: '12px',
+                subLabelMd: '16px',
                 headerSm: '40px',
                 headerMd: '70px',
                 subheaderSm: '20px',
