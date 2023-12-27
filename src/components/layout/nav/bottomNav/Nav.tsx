@@ -6,7 +6,7 @@ export default function Nav({ navItems }: { navItems: NavItems[] }) {
   const router = useRouter();
 
   return (
-    <div className="">
+    <div className="flex justify-center gap-8 bg-g4 rounded-full px-6 py-2">
       {navItems.map((item, index) => (
         <button
           type="button"
