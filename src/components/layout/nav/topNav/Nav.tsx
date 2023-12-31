@@ -4,8 +4,7 @@ import Badge from "@/components/ui/Badge";
 
 export default function Nav({ navItems }: { navItems: NavItems[] }) {
   return (
-    <div className=
-            "
+    <div className="
             flex justify-between
             text-labelSm md:text-labelMd lg:text-labelLg
             py-5 px-4

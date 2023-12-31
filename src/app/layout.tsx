@@ -15,15 +15,15 @@ export default function rootlayout({
 }) {
   return (
     <html lang="en">
-        <body className="font-sans">
-                <div className='bg-g1 flex flex-col min-h-screen'>
-                    <Header/>
-                    <main className='flex-grow-1'>
-                        {children}
-                    </main>
-                    <Footer/>
-                </div>
-        </body>
+      <body className="font-sans">
+        <div className='bg-g1 flex flex-col min-h-screen'>
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </div>
+      </body>
     </html>
   )
 }
