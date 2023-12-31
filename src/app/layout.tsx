@@ -1,28 +1,29 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import type { metadata } from 'next'
 import './globals.css'
-import Footer from '@/components/layout/footer/Footer'
 import Header from '@/components/layout/header/Header'
+import Footer from '@/components/layout/footer/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-    title: 'Lucas Sobczak',
-    description: 'Lucas Sobczak Portfolio',
+export const metadata: metadata = {
+    title: 'lucas sobczak',
+    description: 'lucas sobczak portfolio',
 }
 
-export default function RootLayout({
+export default function rootlayout({
   children,
 }: {
-  children: React.ReactNode
+  children: react.reactnode
 }) {
   return (
     <html lang="en">
-        <body className={inter.className}>
-            <Header/>
+      <body className="font-sans">
+        <div className='bg-g1 flex flex-col min-h-screen'>
+          <Header />
+          <main className="flex-grow">
             {children}
-            <Footer/>
-        </body>
+          </main>
+          <Footer />
+        </div>
+      </body>
     </html>
   )
 }

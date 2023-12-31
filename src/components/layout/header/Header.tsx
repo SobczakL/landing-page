@@ -14,8 +14,10 @@ const pageNavigation: NavItems[] = [
 
 export default function Header(){
     return(
-        <Nav 
-         navItems={pageNavigation}
-         /> 
+        <header className="text-black">
+            <Nav 
+                navItems={pageNavigation}
+            /> 
+        </header>
     )
 }
