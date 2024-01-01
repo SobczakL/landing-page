@@ -1,4 +1,4 @@
-import Nav from "../nav/bottomNav/Nav";
+import BottomNav from "../../nav/BottomNav";
 import { NavItems } from "@/types/types";
 
 const pageNavigation: NavItems[] = [
@@ -18,8 +18,8 @@ const pageNavigation: NavItems[] = [
 
 export default function Footer(){
     return(
-        <footer className="flex-shrink-0 mb-4 text-black px-12">
-            <Nav 
+        <footer className="flex flex-shrink-0 text-black justify-center">
+            <BottomNav 
                 navItems={pageNavigation}
             /> 
         </footer>
