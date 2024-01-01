@@ -1,5 +1,5 @@
 import { NavItems } from "@/types/types";
-import Nav from "../nav/topNav/Nav";
+import TopNav from "../../nav/TopNav";
 
 const pageNavigation: NavItems[] = [
     {
@@ -15,7 +15,7 @@ const pageNavigation: NavItems[] = [
 export default function Header(){
     return(
         <header className="text-black">
-            <Nav 
+            <TopNav 
                 navItems={pageNavigation}
             /> 
         </header>

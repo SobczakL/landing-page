@@ -1,9 +1,9 @@
-import type { metadata } from 'next'
+import type { Metadata } from 'next'
 import './globals.css'
 import Header from '@/components/layout/header/Header'
 import Footer from '@/components/layout/footer/Footer'
 
-export const metadata: metadata = {
+export const metadata: Metadata = {
     title: 'lucas sobczak',
     description: 'lucas sobczak portfolio',
 }
@@ -11,7 +11,7 @@ export const metadata: metadata = {
 export default function rootlayout({
   children,
 }: {
-  children: react.reactnode
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
