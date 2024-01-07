@@ -16,7 +16,7 @@ export default function rootlayout({
   return (
     <html lang="en">
       <body className="font-sans">
-        <div className='bg-g1 flex flex-col min-h-screen'>
+        <div className='bg-g1 flex flex-col h-dvh'>
           <Header />
           <main className="flex-grow">
             {children}
