@@ -54,7 +54,8 @@ const config: Config = {
     },
     variants: {
         extend: {
-            fontSize: ['responsive']
+            fontSize: ['responsive'],
+            padding: ['responsive']
         }
     },
   plugins: [],
