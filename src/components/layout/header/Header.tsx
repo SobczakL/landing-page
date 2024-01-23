@@ -12,12 +12,12 @@ const pageNavigation: NavItems[] = [
     },
 ]
 
-export default function Header(){
-    return(
+export default function Header() {
+    return (
         <header className="text-black">
-            <TopNav 
+            <TopNav
                 navItems={pageNavigation}
-            /> 
+            />
         </header>
     )
 }
