@@ -4,11 +4,14 @@ import './globals.css'
 import type { AppProps } from 'next/app'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
+
     return (
-        <>
+        <div className='flex flex-col h-screen'>
             <Header />
-            <Component {...pageProps} />
+            <div className='flex-grow'>
+                <Component {...pageProps} />
+            </div>
             <Footer />
-        </>
+        </div>
     )
 }
