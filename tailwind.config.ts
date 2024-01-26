@@ -16,9 +16,9 @@ const config: Config = {
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic':
-                  'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
             },
-            colors:{
+            colors: {
                 'g1': '#E9EAE5',
                 'g2': '#F5F5F5',
                 'g3': '#EEEEEE',
@@ -36,6 +36,9 @@ const config: Config = {
                 labelSm: '14px',
                 labelMd: '18px',
                 labelLg: '24px',
+                sectionLabelSm: '16px',
+                sectionLabelMd: '24px',
+                sectionLabelLg: '28px',
                 subLabelSm: '12px',
                 subLabelMd: '16px',
                 headerSm: '40px',
@@ -58,6 +61,6 @@ const config: Config = {
             padding: ['responsive']
         }
     },
-  plugins: [],
+    plugins: [],
 }
 export default config

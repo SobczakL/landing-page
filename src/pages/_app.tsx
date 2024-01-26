@@ -6,9 +6,9 @@ import type { AppProps } from 'next/app'
 export default function MyApp({ Component, pageProps }: AppProps) {
 
     return (
-        <div className='flex flex-col h-screen'>
+        <div className='flex flex-col h-screen overflow-hidden'>
             <Header />
-            <div className='flex-grow'>
+            <div className='h-full'>
                 <Component {...pageProps} />
             </div>
             <Footer />

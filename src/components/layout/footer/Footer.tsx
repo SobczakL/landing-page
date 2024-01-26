@@ -18,7 +18,7 @@ const pageNavigation: NavItems[] = [
 
 export default function Footer() {
     return (
-        <footer className="flex bg-g1 mb-6 flex-shrink-0 text-black justify-center">
+        <footer className="flex bg-g1 text-black justify-center">
             <BottomNav
                 navItems={pageNavigation}
             />
