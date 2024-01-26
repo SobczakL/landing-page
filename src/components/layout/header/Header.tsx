@@ -3,11 +3,11 @@ import TopNav from "../../nav/TopNav";
 
 const pageNavigation: NavItems[] = [
     {
-        title: 'Lucas Sobczak',
+        title: 'LUCAS SOBCZAK',
         link: '/'
     },
     {
-        title: 'Contact',
+        title: 'CONTACT',
         link: '/contact'
     },
 ]
