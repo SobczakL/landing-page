@@ -14,7 +14,7 @@ const pageNavigation: NavItems[] = [
 
 export default function Header() {
     return (
-        <header className="text-black bg-g1 px-4 md:px-10">
+        <header className="text-black bg-g1 px-4 md:px-10 lg:px-16">
             <TopNav
                 navItems={pageNavigation}
             />

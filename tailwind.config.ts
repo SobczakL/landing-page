@@ -17,6 +17,7 @@ const config: Config = {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic':
                     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                'background-tech': "url('/images/technology.png')"
             },
             colors: {
                 'g1': '#E9EAE5',
@@ -58,7 +59,7 @@ const config: Config = {
     variants: {
         extend: {
             fontSize: ['responsive'],
-            padding: ['responsive']
+            padding: ['responsive'],
         }
     },
     plugins: [],
