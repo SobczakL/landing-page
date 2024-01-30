@@ -17,9 +17,16 @@ const skillsText = '{SKILLS}'
 
 export default function About() {
     return (
-        <section className="bg-g2 h-full flex flex-col justify-around pb-32 pt-12 px-4 md:px-10 lg:px-16 pl-14 md:pl-16 relative box-border">
-            <aside className="absolute transform -rotate-90 origin-top-right -translate-x-[104%] top-0 left-0">
-                <div className="flex w-full gap-48 md:gap-16 justify-between text-black text-sideheaderSm md:text-sideheaderMd lg:text-sideheaderLg">
+        <section className="overflow-hidden bg-g2 h-full flex flex-col justify-around pb-32 pt-12 px-4 md:px-10 lg:px-16 pl-14 md:pl-16 relative box-border">
+            <aside className="absolute flex gap-32 transform -rotate-90 origin-top-right -translate-x-[101%] top-0 left-0">
+                <div
+                    style={{
+                        animation: "scrollText 40s linear infinite"
+                    }}
+                    className="transform flex gap-48 md:gap-32 justify-between text-black text-sideheaderSm md:text-sideheaderMd">
+                    <p>LUCAS</p>
+                    <p>SOBCZAK</p>
+                    <p>ABOUT</p>
                     <p>LUCAS</p>
                     <p>SOBCZAK</p>
                     <p>ABOUT</p>
@@ -42,7 +49,7 @@ export default function About() {
                 <p className="font-semibold text-sectionLabelSm md:text-sectionLabelMd lg:text-sectionLabelLg">
                     {skillsText}
                 </p>
-                <div className="grid grid-cols-3 grid-rows-3 gap-y-2">
+                <div className="grid grid-cols-4 grid-rows-3 gap-y-2">
                     {skills.map((skill, key) => (
                         <p
                             key={key}

@@ -27,5 +27,14 @@ body {
 }
 
 .secondaryHeader {
- -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px black;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }

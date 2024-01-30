@@ -52,7 +52,6 @@ const config: Config = {
                 subheaderLg: '30px',
                 sideheaderSm: '35px',
                 sideheaderMd: '45px',
-                sideheaderLg: '50px',
             }
         },
     },
