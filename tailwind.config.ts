@@ -24,7 +24,8 @@ const config: Config = {
                 'g2': '#F5F5F5',
                 'g3': '#EEEEEE',
                 'g4': '#D9D9D9',
-                'g5': '#E4E4E4'
+                'g5': '#E4E4E4',
+                'r1': '#C1C1C1'
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],

@@ -3,6 +3,7 @@ import Header from '@/components/layout/header/Header'
 import './globals.css'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
+import Icon from '@/components/Icon'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 
@@ -11,7 +12,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     return (
         <div className='flex flex-col h-screen relative overflow-hidden'>
             <Header />
-            <div className='h-full'>
+            <div className='h-full relative'>
+                <Icon />
                 <Component {...pageProps} />
             </div>
             <Footer />
