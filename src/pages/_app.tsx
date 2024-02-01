@@ -4,19 +4,39 @@ import './globals.css'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import Icon from '@/components/Icon'
+import { useEffect, useState } from 'react'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 
-    const url = useRouter()
-    console.log(url)
+    const router = useRouter()
+    const [currentPage, setCurrentPage] = useState(router.pathname)
+    const [isLoading, setIsLoading] = useState(false)
+
+    const handleNavigation = (loading: boolean) => {
+        setIsLoading(loading);
+    };
+
+    useEffect(() => {
+        const handleRouteChangeStart = (url: string) => {
+            setCurrentPage(url)
+        };
+        router.events.on('routeChangeStart', handleRouteChangeStart)
+
+        return () => {
+            router.events.off('routeChangeStart', handleRouteChangeStart)
+        }
+    }, [router]);
+
     return (
         <div className='flex flex-col h-screen relative overflow-hidden'>
             <Header />
-            <div className='h-full relative'>
-                <Icon />
+            <div className='h-full relative bg-g1'>
+                <Icon
+                    currentPage={currentPage}
+                />
                 <Component {...pageProps} />
             </div>
-            <Footer />
+            <Footer onNavigation={handleNavigation} />
         </div>
     )
 }
