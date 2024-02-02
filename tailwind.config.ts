@@ -53,6 +53,9 @@ const config: Config = {
                 subheaderLg: '30px',
                 sideheaderSm: '35px',
                 sideheaderMd: '45px',
+                projectBgSm: '200px',
+                projectBgMd: '360px',
+                projectBgLg: '480px',
             }
         },
     },
