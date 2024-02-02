@@ -10,14 +10,12 @@ export default function Icon({ currentPage }: IconProps) {
 
     useEffect(() => {
         switch (currentPage) {
+            case '/views/contact':
             case '/views/about':
                 setIconPosition({ top: '70%', right: '0%', transition: 'top 1s, right 1s' });
                 break;
             case '/views/projects':
-                setIconPosition({ top: '70%', right: '0%', transition: 'top 1s, right 1s' });
-                break;
-            case '/views/about':
-                setIconPosition({ top: '70%', right: '0%', transition: 'top 1s, right 1s' });
+                setIconPosition({ top: '0%', right: '0%', transition: 'top 1s, right 1s' });
                 break;
             default:
                 setIconPosition({ top: '0%', right: '0%', transition: 'top 1s, right 1s' });
