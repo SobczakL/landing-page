@@ -28,9 +28,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     }, [router]);
 
     return (
-        <div className='flex flex-col h-screen relative overflow-hidden'>
+        <div className='flex flex-col h-screen relative overflow-hidden cursor-default'>
             <Header />
-            <div className='h-full relative bg-g1'>
+            <div className='h-full relative bg-current'>
                 <Icon
                     currentPage={currentPage}
                 />
