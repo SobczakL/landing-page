@@ -28,7 +28,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     }, [router]);
 
     return (
-        <div className='flex flex-col h-screen relative overflow-hidden cursor-default'>
+        <div className='flex flex-col h-screen relative overflow-hidden'>
             <Header />
             <div className='h-full relative bg-current'>
                 <Icon
