@@ -30,7 +30,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     return (
         <div className='flex flex-col h-screen relative overflow-hidden'>
             <Header />
-            <div className='h-full relative bg-g1'>
+            <div className='h-full relative bg-current'>
                 <Icon
                     currentPage={currentPage}
                 />
