@@ -30,7 +30,11 @@ const config: Config = {
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
-                serif: ['Merriweather', 'serif']
+                serif: ['Merriweather', 'serif'],
+                display: ['Fors', 'sans-serif'],
+                displayM: ['ForsM', 'sans-serif'],
+                displayB: ['ForsB', 'sans-serif'],
+
             },
             fontSize: {
                 bodySm: '12px',
