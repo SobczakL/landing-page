@@ -39,7 +39,7 @@ export default function About() {
                     <img className="h-full" src="/images/technology.png" alt="microchip photo"></img>
                 </div>
                 <div className="flex flex-col gap-4">
-                    <p className="text-right font-semibold text-black text-sectionLabelSm md:text-sectionLabelMd lg:text-sectionLabelLg">
+                    <p className="text-right font-displayM font-semibold text-black text-sectionLabelSm md:text-sectionLabelMd lg:text-sectionLabelLg">
                         ABOUT
                     </p>
                     <p className="opacity-50 ml-auto text-bodySm md:text-bodyMd lg:text-bodyLg text-black font-serif">
@@ -47,8 +47,8 @@ export default function About() {
                     </p>
                 </div>
             </div>
-            <div className="text-black flex flex-col gap-4 mr-auto w-[80%] md:max-w-[40%]">
-                <p className="font-semibold text-sectionLabelSm md:text-sectionLabelMd lg:text-sectionLabelLg">
+            <div className="text-black flex flex-col gap-4 mr-auto w-full md:max-w-[40%]">
+                <p className="font-displayM font-semibold text-sectionLabelSm md:text-sectionLabelMd lg:text-sectionLabelLg">
                     {skillsText}
                 </p>
                 <div className="grid grid-cols-4 grid-rows-3 gap-y-2">

@@ -7,11 +7,11 @@ export default function useCurrentTime() {
     useEffect(() => {
         const updateTime = setInterval(() => {
             setCurrentTime(new Date())
-        }, 1000)
+        }, 100)
 
         return () => clearInterval(updateTime);
     }, [])
 
-    const formattedTime = currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+    const formattedTime = currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
     return formattedTime;
 }
