@@ -14,7 +14,7 @@ export default function Projects() {
         <section className="relative bg-g3 h-full pt-24 md:pt-28 lg:pt-32">
             <div className="z-10 max-w-[90%] border divide-none border-t-black mx-auto px-4 md:px-10 lg:px-16">
                 <div className="flex text-labelSm md:text-labelMd lg:text-labelLg text-black">
-                    <div className="w-1/2 py-2 pl-2">
+                    <div className="w-1/2 py-2 pl-2 font-medium">
                         <p>Project</p>
                     </div>
                     <div className="w-1/2 py-2 border border-l-black divide-transparent pl-2">
