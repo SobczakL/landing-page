@@ -8,6 +8,20 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+@font-face {
+  font-family: "ForsR";
+  src: url("../../public/fonts/TT\ Fors\ Trial\ Regular.ttf");
+}
+
+@font-face {
+  font-family: "ForsM";
+  src: url("../../public/fonts/TT\ Fors\ Trial\ Medium.ttf");
+}
+
+@font-face {
+  font-family: "ForsB";
+  src: url("../../public/fonts/TT\ Fors\ Trial\ Bold.ttf");
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
