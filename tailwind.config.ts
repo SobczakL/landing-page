@@ -29,12 +29,10 @@ const config: Config = {
                 'r1': '#C1C1C1'
             },
             fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-                serif: ['Merriweather', 'serif'],
-                display: ['ForsR', 'sans-serif'],
-                displayM: ['ForsM', 'sans-serif'],
-                displayB: ['ForsB', 'sans-serif'],
-
+                sans: ['ForsR', 'sans-serif'],
+                sansM: ['ForsM', 'sans-serif'],
+                sansB: ['ForsB', 'sans-serif'],
+                serif: ['Amiri', 'serif'],
             },
             fontSize: {
                 bodySm: '14px',
