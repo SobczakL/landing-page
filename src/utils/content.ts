@@ -8,6 +8,14 @@ export const projectsData = [
         link: 'https://rora.vercel.app/'
     },
     {
+        title: 'RETAIL CALCULATOR',
+        type: 'CLI Tool',
+        image: '/images/retail-calculator.png',
+        header: 'RETAIL CALCULATOR',
+        description: 'This Retail Math Calculator is a simple C program designed for retail businesses. It helps users perform basic calculations related to sales, productivity, and inventory metrics. With an easy-to-use menu interface, users can calculate things like average sales, profit margins, and inventory turnover. Whether the user is a small shop or a big retailer, this tool can assist in managing key aspects of your business.',
+        link: 'https://github.com/SobczakL/retail-calculator'
+    },
+    {
         title: 'AI ONBOARDING',
         type: 'FULL-STACK APP',
         image: '/images/shopify-brainstation.png',

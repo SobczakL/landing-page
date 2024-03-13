@@ -59,6 +59,9 @@ const config: Config = {
                 projectBgSm: '200px',
                 projectBgMd: '360px',
                 projectBgLg: '480px',
+                menuSm: '30px',
+                menuMd: 'px',
+                menuLg: 'px',
             }
         },
     },
