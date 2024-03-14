@@ -1,12 +1,23 @@
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/router'
 
-type IconProps = {
-    currentPage: string;
-}
+export default function Icon() {
 
-export default function Icon({ currentPage }: IconProps) {
+    const router = useRouter()
 
     const [iconPosition, setIconPosition] = useState({ top: '0%', right: '0%', transition: 'none' });
+    const [currentPage, setCurrentPage] = useState(router.pathname)
+
+    useEffect(() => {
+        const handleRouteChangeStart = (url: string) => {
+            setCurrentPage(url)
+        };
+        router.events.on('routeChangeStart', handleRouteChangeStart)
+
+        return () => {
+            router.events.off('routeChangeStart', handleRouteChangeStart)
+        }
+    }, [router]);
 
     useEffect(() => {
         switch (currentPage) {
@@ -22,6 +33,7 @@ export default function Icon({ currentPage }: IconProps) {
                 break;
         }
     }, [currentPage]); return (
+
         <div
             style={iconPosition}
             className="absolute right-0 px-4 md:px-8 lg:px-12 py-4 md:py-8 lg:py-12 z-10" >
