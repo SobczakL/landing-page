@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { NavItems } from "@/types/types";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import SocialLinks from '@/components/SocialLinks';
 
 const pageNavigation: NavItems[] = [
@@ -33,6 +33,7 @@ export default function Header() {
     const [currentURL, setCurrentURL] = useState('');
     const [menuState, setMenuState] = useState(menuItems.Closed);
     const [hoveredLink, setHoveredLink] = useState('');
+    const menuRef = useRef(null);
 
     useEffect(() => {
         setCurrentURL(router.asPath);
@@ -45,6 +46,19 @@ export default function Header() {
 
         return () => {
             router.events.off('routeChangeComplete', handleRouteChange);
+        };
+    }, []);
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setMenuState(menuItems.Closed);
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
 
@@ -70,6 +84,10 @@ export default function Header() {
                 <div
                     className="flex items-center gap-1 rounded-full border border-black px-4 py-0.25 w-fit h-fit"
                     onClick={handleMenuSelection}
+                    style={{
+                        backgroundColor: menuState === menuItems.Closed ? "" : "black",
+                        color: menuState === menuItems.Closed ? "" : "white"
+                    }}
                 >
                     <p>
                         {menuState.text}
@@ -78,41 +96,58 @@ export default function Header() {
                         className="flex gap-0.5"
                         style={{
                             transform: menuState === menuItems.Opened ? 'rotate(90deg)' : 'rotate(0)',
-                            transition: "transform 0.5s ease"
+                            transition: "transform 0.5s ease",
                         }}
                     >
-                        <div className="w-1 h-1 bg-black rounded-full" />
-                        <div className="w-1 h-1 bg-black rounded-full" />
+                        <div
+                            className="w-1 h-1 bg-black rounded-full"
+                            style={{
+                                backgroundColor: menuState === menuItems.Closed ? "black" : "white",
+                            }}
+                        />
+                        <div
+                            className="w-1 h-1 bg-black rounded-full"
+                            style={{
+                                backgroundColor: menuState === menuItems.Closed ? "black" : "white",
+                            }}
+                        />
                     </div>
                 </div>
             </section>
             <div
-                className={`fixed z-20 bg-white right-0 overflow-x-hidden box-border text-black text-menuSm flex flex-col rounded-lg h-[92%] py-16 gap-16`}
+                className='fixed z-20 right-0 overflow-x-hidden box-border rounded-lg h-[92%]'
                 style={{
                     width: `${menuState.width}`,
-                    transition: '1s ease'
+                    transition: 'width 0.5s ease-in-out'
                 }}
             >
-                {pageNavigation.slice(1).map((item, index) => (
-                    <div
-                        key={index}
-                        className='flex justify-between items-center w-full px-4'
-                        onMouseEnter={() => setHoveredLink(item.link)}
-                        onMouseLeave={() => setHoveredLink('')}
-                    >
-                        <p
-                            className=''
-                            onClick={() => handleNavigation(item.link)}
-                        >
-                            {item.title}
-                        </p>
-                        {hoveredLink === item.link && (
-                            <div className="w-1 h-1 bg-black rounded-full" />
-                        )}
+                <div
+                    ref={menuRef}
+                    className='bg-white md:bg-transparent md:pt-12 text-black text-menuSm md:text-menuMd drop-shadow-[5px_0px_35px_rgba(0,0,0,0.5)] flex flex-col gap-16 h-full md:ml-auto md:mr-10 lg:mr-16 md:max-h-[70%] md:max-w-[300px] lg:max-w-[360px]'
+                >
+                    <div className='bg-white flex flex-col py-10 gap-12 rounded-lg'>
+                        {pageNavigation.slice(1).map((item, index) => (
+                            <div
+                                key={index}
+                                className='flex justify-between items-center w-full px-4 md:px-8'
+                                onMouseEnter={() => setHoveredLink(item.link)}
+                                onMouseLeave={() => setHoveredLink('')}
+                            >
+                                <p
+                                    className=''
+                                    onClick={() => handleNavigation(item.link)}
+                                >
+                                    {item.title}
+                                </p>
+                                {hoveredLink === item.link && (
+                                    <div className="w-1 h-1 bg-black rounded-full" />
+                                )}
+                            </div>
+                        ))}
                     </div>
-                ))}
-                <div className='px-4'>
-                    <SocialLinks />
+                    <div className='px-4 md:px-8 bg-white md:bg-b1 md:text-white rounded-lg'>
+                        <SocialLinks />
+                    </div>
                 </div>
             </div>
         </header>
