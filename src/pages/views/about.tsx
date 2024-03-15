@@ -51,7 +51,7 @@ export default function About() {
                 <p className="font-sans font-semibold text-sectionLabelSm md:text-sectionLabelMd lg:text-sectionLabelLg">
                     {skillsText}
                 </p>
-                <div className="grid grid-cols-4 grid-rows-3 gap-y-2">
+                <div className="grid grid-cols-3 grid-rows-4 gap-y-2">
                     {skills.map((skill, key) => (
                         <p
                             key={key}

@@ -26,7 +26,8 @@ const config: Config = {
                 'g4': '#D9D9D9',
                 'g5': '#E4E4E4',
                 'g6': '#B4B4B4',
-                'r1': '#C1C1C1'
+                'r1': '#C1C1C1',
+                'b1': '#353535',
             },
             fontFamily: {
                 sans: ['ForsR', 'sans-serif'],

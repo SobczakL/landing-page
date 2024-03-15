@@ -18,7 +18,7 @@ export default function Contact() {
                     <p>For any collaborative projects or inquiries feel free to reach out to me.</p>
                     <p>lucassobczak3@gmail.com</p>
                 </div>
-                <div className="col-span-2">
+                <div className="col-span-1 text-black">
                     <SocialLinks />
                 </div>
                 <div className="col-span-1 col-start-3 row-start-3 ml-auto lg:ml-0">
