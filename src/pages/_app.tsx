@@ -8,9 +8,9 @@ import { useEffect, useState } from 'react'
 export default function MyApp({ Component, pageProps }: AppProps) {
 
     return (
-        <div className='relative flex flex-col h-screen'>
+        <div className='relative flex flex-col h-screen max-w-[100%]'>
             <Header />
-            <div className='h-full relative bg-current'>
+            <div className='flex-grow relative bg-current'>
                 <Icon
                 />
                 <Component {...pageProps} />

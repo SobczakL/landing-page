@@ -4,11 +4,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import SocialLinks from '@/components/SocialLinks';
 
-type NavProps = {
-    pageNavigation: NavItems[];
-    onNavigation: (url: string) => void;
-}
-
 const pageNavigation: NavItems[] = [
     {
         title: 'LUCAS SOBCZAK',
@@ -29,14 +24,14 @@ const pageNavigation: NavItems[] = [
 ]
 
 const menuItems = {
-    Menu: { display: "hidden", text: "Menu" },
-    Close: { display: "block", text: "Close" }
+    Closed: { text: "Menu", width: '0%' },
+    Opened: { text: "Close", width: '100%' }
 }
 
 export default function Header() {
     const router = useRouter();
     const [currentURL, setCurrentURL] = useState('');
-    const [menuState, setMenuState] = useState(menuItems.Menu);
+    const [menuState, setMenuState] = useState(menuItems.Closed);
     const [hoveredLink, setHoveredLink] = useState('');
 
     useEffect(() => {
@@ -55,11 +50,11 @@ export default function Header() {
 
     const handleNavigation = (url: string) => {
         router.push(url);
-        setMenuState(menuItems.Menu);
+        setMenuState(menuItems.Closed);
     };
 
     const handleMenuSelection = () => {
-        setMenuState(prevState => prevState === menuItems.Menu ? menuItems.Close : menuItems.Menu);
+        setMenuState(prevState => prevState === menuItems.Closed ? menuItems.Opened : menuItems.Closed);
     };
 
     return (
@@ -82,7 +77,7 @@ export default function Header() {
                     <div
                         className="flex gap-0.5"
                         style={{
-                            transform: menuState === menuItems.Close ? 'rotate(90deg)' : 'rotate(0)',
+                            transform: menuState === menuItems.Opened ? 'rotate(90deg)' : 'rotate(0)',
                             transition: "transform 0.5s ease"
                         }}
                     >
@@ -91,11 +86,17 @@ export default function Header() {
                     </div>
                 </div>
             </section>
-            <div className={`absolute ${menuState.display} z-20 bg-white text-black text-menuSm flex flex-col rounded-lg w-full h-full px-4 py-16 gap-16`}>
+            <div
+                className={`fixed z-20 bg-white right-0 overflow-x-hidden box-border text-black text-menuSm flex flex-col rounded-lg h-[92%] py-16 gap-16`}
+                style={{
+                    width: `${menuState.width}`,
+                    transition: '1s ease'
+                }}
+            >
                 {pageNavigation.slice(1).map((item, index) => (
                     <div
                         key={index}
-                        className='flex justify-between items-center w-full'
+                        className='flex justify-between items-center w-full px-4'
                         onMouseEnter={() => setHoveredLink(item.link)}
                         onMouseLeave={() => setHoveredLink('')}
                     >
@@ -110,7 +111,9 @@ export default function Header() {
                         )}
                     </div>
                 ))}
-                <SocialLinks />
+                <div className='px-4'>
+                    <SocialLinks />
+                </div>
             </div>
         </header>
     )
