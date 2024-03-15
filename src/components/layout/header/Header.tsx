@@ -4,11 +4,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import SocialLinks from '@/components/SocialLinks';
 
-// type NavProps = {
-//     pageNavigation: NavItems[];
-//     onNavigation: (url: string) => void;
-// }
-
 const pageNavigation: NavItems[] = [
     {
         title: 'LUCAS SOBCZAK',
