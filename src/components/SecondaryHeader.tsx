@@ -1,8 +1,8 @@
 export default function SecondaryHeader() {
     return (
-        <div className="flex flex-col ml-auto max-w-max">
+        <div className="flex flex-col max-w-max">
             <p
-                className="secondaryHeader col-start-3 col-span-2 text-black align-baseline text-headerSm md:text-headerMd"
+                className="text-black leading-none align-top text-headerSm md:text-headerMd"
             >
                 DEVELOPER
             </p>
