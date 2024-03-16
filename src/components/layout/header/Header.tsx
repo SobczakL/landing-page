@@ -51,25 +51,26 @@ export default function Header() {
 
     useEffect(() => {
         function handleClickOutside(event) {
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
+            if (menuRef.current && menuRef.current.contains(event.target)) {
                 setMenuState(menuItems.Closed);
             }
         }
 
-        document.addEventListener("mousedown", handleClickOutside);
+        menuRef.current.addEventListener("mousedown", handleClickOutside);
         return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
+            menuRef.current.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
+
+    const handleMenuSelection = () => {
+        setMenuState(prevState => prevState === menuItems.Closed ? menuItems.Opened : menuItems.Closed);
+    };
 
     const handleNavigation = (url: string) => {
         router.push(url);
         setMenuState(menuItems.Closed);
     };
 
-    const handleMenuSelection = () => {
-        setMenuState(prevState => prevState === menuItems.Closed ? menuItems.Opened : menuItems.Closed);
-    };
 
     return (
         <header>
@@ -115,6 +116,7 @@ export default function Header() {
                 </div>
             </section>
             <div
+                ref={menuRef}
                 className='fixed z-20 right-0 overflow-x-hidden box-border rounded-lg h-[92%]'
                 style={{
                     width: `${menuState.width}`,
@@ -122,7 +124,6 @@ export default function Header() {
                 }}
             >
                 <div
-                    ref={menuRef}
                     className='bg-white md:bg-transparent md:pt-12 text-black text-menuSm md:text-menuMd drop-shadow-[5px_0px_35px_rgba(0,0,0,0.5)] flex flex-col gap-16 h-full md:ml-auto md:mr-10 lg:mr-16 md:max-h-[70%] md:max-w-[300px] lg:max-w-[360px]'
                 >
                     <div className='bg-white flex flex-col py-10 gap-12 rounded-lg'>
