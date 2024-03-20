@@ -5,4 +5,4 @@ export default function PrimaryHeader() {
             <span className="text-headerSm md:text-headerMd">SOBCZAK</span>
         </div>
     );
-}
+}   
