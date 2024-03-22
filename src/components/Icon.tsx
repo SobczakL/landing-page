@@ -36,7 +36,7 @@ export default function Icon() {
 
         <div
             style={iconPosition}
-            className="absolute right-0 px-4 md:px-8 lg:px-12 py-8 md:py-8 lg:py-12 z-10" >
+            className="absolute right-0 px-4 md:px-8 lg:px-16 py-8 md:py-8 lg:py-12 z-10" >
             <div
                 style={{
                     animation: "fadeIcon 10s linear infinite"
