@@ -48,7 +48,7 @@ const config: Config = {
                 subLabelSm: '12px',
                 subLabelMd: '16px',
                 headerSm: '40px',
-                headerMd: '70px',
+                headerMd: '68px',
                 locationSm: '20px',
                 locationMd: '32px',
                 locationLg: '36px',
