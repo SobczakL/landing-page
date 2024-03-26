@@ -4,7 +4,6 @@ const config: Config = {
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
         './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
         extend: {
@@ -27,7 +26,7 @@ const config: Config = {
                 'g5': '#E4E4E4',
                 'g6': '#B4B4B4',
                 'r1': '#C1C1C1',
-                'b1': '#353535',
+                'b1': '#393939',
             },
             fontFamily: {
                 sans: ['ForsR', 'sans-serif'],
@@ -39,6 +38,9 @@ const config: Config = {
                 bodySm: '14px',
                 bodyMd: '16px',
                 bodyLg: '18px',
+                timeSm: '12px',
+                timeMd: '14px',
+                timeLg: '16px',
                 labelSm: '16px',
                 labelMd: '18px',
                 labelLg: '24px',

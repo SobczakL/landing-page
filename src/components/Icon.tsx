@@ -36,12 +36,12 @@ export default function Icon() {
 
         <div
             style={iconPosition}
-            className="absolute right-0 px-4 md:px-8 lg:px-16 py-8 md:py-8 lg:py-12 z-10" >
+            className="absolute right-0 px-4 md:px-10 lg:px-16 py-8 md:py-8 lg:py-12 z-10" >
             <div
                 style={{
                     animation: "fadeIcon 10s linear infinite"
                 }}
-                className="relative rounded-full border border-r1 w-14 h-14 flex justify-center items-center">
+                className="relative rounded-full border border-r1 w-14 h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 flex justify-center items-center">
                 <div className="rounded-full border border-black w-1 h-1"></div>
                 <div
                     className="absolute rounded-full border border-black w-8 h-8 transform translate-y-6 -translate-x-6"

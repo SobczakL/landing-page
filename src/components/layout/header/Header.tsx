@@ -126,7 +126,7 @@ export default function Header() {
                 <div
                     className='bg-white md:bg-transparent md:pt-12 text-black text-menuSm md:text-menuMd drop-shadow-[5px_0px_35px_rgba(0,0,0,0.5)] flex flex-col gap-16 h-full md:ml-auto md:mr-10 lg:mr-16 md:max-h-[70%] md:max-w-[300px] lg:max-w-[360px]'
                 >
-                    <div className='bg-white flex flex-col py-10 gap-12 rounded-lg'>
+                    <div className='bg-white md:backdrop-opacity-95 md:backdrop-invert md:bg-white/95 flex flex-col py-10 gap-12 rounded-lg'>
                         {pageNavigation.slice(1).map((item, index) => (
                             <div
                                 key={index}
@@ -146,7 +146,7 @@ export default function Header() {
                             </div>
                         ))}
                     </div>
-                    <div className='px-4 md:px-8 bg-white md:bg-b1 md:text-white rounded-lg'>
+                    <div className='px-4 md:px-8 bg-white md:backdrop-opacity-95 md:backdrop-invert md:bg-b1/95 md:text-white rounded-lg'>
                         <SocialLinks />
                     </div>
                 </div>
