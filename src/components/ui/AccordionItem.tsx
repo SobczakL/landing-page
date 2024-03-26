@@ -30,11 +30,11 @@ export default function AccordionItem({
                     backgroundColor: isActive ? "#B4B4B4" : "",
                     color: isActive ? "#FFFFFF" : ""
                 }}
-                className="flex hover:bg-g6 hover:text-white">
+                className="flex hover:bg-g6 hover:text-white hover:uppercase">
                 <div className="w-1/2 py-2 pl-2">
                     <p>{title}</p>
                 </div>
-                <div className="w-1/2 py-2 border border-l-black pl-2">
+                <div className="w-1/2 py-2 border-l border-l-black pl-2">
                     <p>{projectType}</p>
                 </div>
             </div>

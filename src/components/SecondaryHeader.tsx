@@ -2,7 +2,7 @@ export default function SecondaryHeader() {
     return (
         <div className="flex flex-col max-w-max gap-2">
             <p
-                className="text-black leading-none align-top text-headerSm md:text-headerMd"
+                className="text-black w-fit leading-none text-headerSm md:text-headerMd"
             >
                 DEVELOPER
             </p>
