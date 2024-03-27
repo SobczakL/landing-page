@@ -10,8 +10,8 @@ export default function Projects() {
     }
 
     return (
-        <section className="relative box-border overflow-hidden bg-g3 h-full pt-24 md:pt-28 lg:pt-32 px-4 md:px-10 lg:px-16">
-            <div className="z-10 max-w-[90%] border-t border-t-black mx-auto">
+        <section className="relative box-border overflow-hidden bg-g3 h-full pt-16 md:pt-28 lg:pt-32 px-4 md:px-10 lg:px-16">
+            <div className="z-30 max-w-[87%] border-t border-t-black mx-auto">
                 <div className="flex bg-g4 text-labelSm md:text-labelMd lg:text-labelLg text-black">
                     <div className="w-1/2 py-2 pl-2 font-sans">
                         <p>PROJECT</p>

@@ -47,7 +47,7 @@ export default function Header() {
         return () => {
             router.events.off('routeChangeComplete', handleRouteChange);
         };
-    }, []);
+    }, [router, setCurrentURL]);
 
     useEffect(() => {
         function handleClickOutside(event) {

@@ -20,23 +20,34 @@ export default function Icon() {
     }, [router]);
 
     useEffect(() => {
+        let newPosition = {};
+
         switch (currentPage) {
-            case '/views/contact':
             case '/views/about':
-                setIconPosition({ top: '70%', right: '0%', transition: 'top 1s, right 1s' });
+                newPosition = { top: '70%', right: '0%', bottom: '', left: '', transition: 'top 1s, right 1s' }
                 break;
             case '/views/projects':
-                setIconPosition({ top: '0%', right: '0%', transition: 'top 1s, right 1s' });
+                newPosition = { top: '70%', right: '', bottom: '', left: '0%', transition: 'top 1s, left 1s' }
+                break;
+            case '/views/contact':
+                newPosition = { top: '0%', right: '', bottom: '', left: '0%', transition: 'top 1s, left 1s' }
                 break;
             default:
-                setIconPosition({ top: '0%', right: '0%', transition: 'top 1s, right 1s' });
+                newPosition = { top: '0%', right: '0%', bottom: '', left: '', transition: 'top 1s, right 1s' }
                 break;
         }
-    }, [currentPage]); return (
+
+        setIconPosition(prevPosition => ({
+            ...prevPosition,
+            ...newPosition
+        }));
+    }, [currentPage]);
+
+    return (
 
         <div
             style={iconPosition}
-            className="absolute right-0 px-4 md:px-10 lg:px-16 py-8 md:py-8 lg:py-12 z-10" >
+            className="absolute right-0 px-4 md:px-10 lg:px-16 py-8 md:py-8 lg:py-12 z-10 w-fit" >
             <div
                 style={{
                     animation: "fadeIcon 10s linear infinite"
