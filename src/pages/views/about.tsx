@@ -20,15 +20,21 @@ const skillsText = '{SKILLS}'
 export default function About() {
     return (
         <section className="overflow-hidden bg-g2 h-full flex flex-col justify-around pb-32 pt-12 px-4 md:px-10 lg:px-16 pl-14 md:pl-16 relative box-border">
-            <aside className="absolute flex gap-32 transform -rotate-90 origin-top-right -translate-x-[101%] top-0 left-0">
+            <aside className="absolute flex gap-48 md:gap-32 transform -rotate-90 origin-top-right -translate-x-[101%] top-0 left-0">
                 <div
                     style={{
-                        animation: "scrollText 40s linear infinite"
+                        animation: "scrollText 30s linear infinite"
                     }}
                     className="transform flex gap-48 md:gap-32 justify-between text-black text-sideheaderSm md:text-sideheaderMd">
                     <p>LUCAS</p>
                     <p>SOBCZAK</p>
                     <p>ABOUT</p>
+                </div>
+                <div
+                    style={{
+                        animation: "scrollText 30s linear infinite"
+                    }}
+                    className="transform flex gap-48 md:gap-32 justify-between text-black text-sideheaderSm md:text-sideheaderMd">
                     <p>LUCAS</p>
                     <p>SOBCZAK</p>
                     <p>ABOUT</p>
