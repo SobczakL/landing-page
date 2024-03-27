@@ -5,7 +5,7 @@ export default function Home() {
     const currentTime = useCurrentTime();
     return (
         <div className="self-center text-black box-border gap-8 grid grid-rows-[1fr, 2fr, 1fr] grid-cols-3 md:grid-cols-4 px-4 md:px-10 lg:px-16 pt-10 pb-16 bg-g1 h-full">
-            <div className='w-fit col-span-2 lg:max-w-[370px] lg:col-span-1 lg:ml-auto'>
+            <div className='w-fit pr-1 col-span-2 lg:max-w-[370px] lg:col-span-1 lg:ml-auto'>
                 <SecondaryHeader />
             </div>
             <div className='col-span-3 grid grid-cols-subgrid grid-rows-subgrid md:flex md:flex-col md:justify-self-center md:self-center md:gap-8 md:col-span-2 md:row-start-2 md:max-w-96 lg:max-w-[425px] lg:pl-[10%] text-bodySm md:text-bodyMd lg:text-bodyLg'>

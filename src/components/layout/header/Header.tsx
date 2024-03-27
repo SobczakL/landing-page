@@ -83,7 +83,7 @@ export default function Header() {
                     {pageNavigation[0].title}
                 </Link>
                 <div
-                    className="flex items-center gap-1 rounded-full border border-black px-4 py-0.25 w-fit h-fit"
+                    className="flex items-center gap-1 rounded-full border border-black px-4 py-0.25 w-fit h-fit text-labelSm md:text-labelMd "
                     onClick={handleMenuSelection}
                     style={{
                         backgroundColor: menuState === menuItems.Closed ? "" : "black",
@@ -141,7 +141,7 @@ export default function Header() {
                                     {item.title}
                                 </p>
                                 {hoveredLink === item.link && (
-                                    <div className="w-1 h-1 bg-black rounded-full" />
+                                    <div className="w-2 h-2 bg-black rounded-full" />
                                 )}
                             </div>
                         ))}
