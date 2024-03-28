@@ -47,14 +47,14 @@ export default function About() {
                         ABOUT
                     </p>
                     <p className="opacity-50 ml-auto text-bodySm md:text-bodyMd lg:text-bodyLg text-black font-serif">
-                        I'm a full-stack developer dedicated to crafting tech-driven solutions for our interconnected world. With a diverse background spanning industries such as kitchen management, luxury retail sales, and retail buying at Canada's largest bookstores, I bring a unique perspective to problem-solving. As a lifelong learner, I embrace new technologies and industry trends to continuously enhance my expertise. I'm excited to collaborate with fellow enthusiasts and aim to create innovative solutions that address real-world challenges.
+                        I&apos;m a full-stack developer dedicated to crafting tech-driven solutions for our interconnected world. With a diverse background spanning industries such as kitchen management, luxury retail sales, and retail buying at Canada&apos;s largest bookstores, I bring a unique perspective to problem-solving. As a lifelong learner, I embrace new technologies and industry trends to continuously enhance my expertise. I&apos;m excited to collaborate with fellow enthusiasts and aim to create innovative solutions that address real-world challenges.
                     </p>
                 </div>
             </div>
             <div className="text-black grid grid-rows-[2fr, 1fr] grid-cols-4">
                 <div className="col-span-full md:col-span-2">
                     <p className="font-sans font-semibold mb-6 text-sectionLabelSm md:text-sectionLabelMd lg:text-sectionLabelLg">
-                        &lceil; SKILLS &rfloor;
+                        {'{SKILLS}'}
                     </p>
                     <div className="grid grid-cols-3 grid-rows-4 gap-y-2 mb-8">
                         {skills.map((skill, key) => (
