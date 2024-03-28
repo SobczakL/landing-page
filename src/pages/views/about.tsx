@@ -15,7 +15,7 @@ const skills = [
     "VIM"
 ]
 
-// const skillsText = '{SKILLS}';
+const skillsText = '&#123;SKILLS&#125;';
 
 export default function About() {
     return (
@@ -55,7 +55,7 @@ export default function About() {
             </div>
             <div className="text-black flex flex-col gap-4 mr-auto w-full md:max-w-[40%]">
                 <p className="font-sans font-semibold text-sectionLabelSm md:text-sectionLabelMd lg:text-sectionLabelLg">
-                    {'{SKILLS}'}
+                    {skillsText}
                 </p>
                 <div className="grid grid-cols-3 grid-rows-4 gap-y-2">
                     {skills.map((skill, key) => (
