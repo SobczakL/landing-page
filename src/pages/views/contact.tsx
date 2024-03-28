@@ -22,7 +22,6 @@ export default function Contact() {
                     <SocialLinks />
                 </div>
                 <div className="col-span-1 col-start-3 self-center row-start-3 justify-self-end">
-
                     <img src="/images/usb.png" alt="alt" className="w-full max-w-[325px]" />
                 </div>
             </div>

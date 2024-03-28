@@ -36,31 +36,36 @@ export default function Header() {
     const menuRef = useRef(null);
 
     useEffect(() => {
-        setCurrentURL(router.asPath);
-
         const handleRouteChange = (url: string) => {
             setCurrentURL(url);
-        }
+        };
+
+        setCurrentURL(router.asPath);
 
         router.events.on('routeChangeComplete', handleRouteChange);
 
         return () => {
             router.events.off('routeChangeComplete', handleRouteChange);
         };
-    }, [router, setCurrentURL]);
+    }, [router])
 
     useEffect(() => {
         function handleClickOutside(event) {
-            if (menuRef.current && menuRef.current.contains(event.target)) {
+            if (menuRef.current?.contains(event.target)) {
                 setMenuState(menuItems.Closed);
             }
         }
 
-        menuRef.current.addEventListener("mousedown", handleClickOutside);
+        if (menuRef.current) {
+            menuRef.current.addEventListener("mousedown", handleClickOutside);
+        }
+
         return () => {
-            menuRef.current.removeEventListener("mousedown", handleClickOutside);
+            if (menuRef.current) {
+                menuRef.current.removeEventListener("mousedown", handleClickOutside);
+            }
         };
-    }, []);
+    }, [])
 
     const handleMenuSelection = () => {
         setMenuState(prevState => prevState === menuItems.Closed ? menuItems.Opened : menuItems.Closed);
@@ -86,8 +91,8 @@ export default function Header() {
                     className="flex items-center gap-1 rounded-full border border-black px-4 py-0.25 w-fit h-fit text-labelSm md:text-labelMd "
                     onClick={handleMenuSelection}
                     style={{
-                        backgroundColor: menuState === menuItems.Closed ? "" : "black",
-                        color: menuState === menuItems.Closed ? "" : "white"
+                        backgroundColor: menuState === menuItems.Closed ? "inherit" : "black",
+                        color: menuState === menuItems.Closed ? "inherit" : "white"
                     }}
                 >
                     <p>
@@ -98,20 +103,11 @@ export default function Header() {
                         style={{
                             transform: menuState === menuItems.Opened ? 'rotate(90deg)' : 'rotate(0)',
                             transition: "transform 0.5s ease",
+                            backgroundColor: menuState === menuItems.Closed ? "inherit" : "white",
                         }}
                     >
-                        <div
-                            className="w-1 h-1 bg-black rounded-full"
-                            style={{
-                                backgroundColor: menuState === menuItems.Closed ? "black" : "white",
-                            }}
-                        />
-                        <div
-                            className="w-1 h-1 bg-black rounded-full"
-                            style={{
-                                backgroundColor: menuState === menuItems.Closed ? "black" : "white",
-                            }}
-                        />
+                        <div className="w-1 h-1 bg-black rounded-full" />
+                        <div className="w-1 h-1 bg-black rounded-full" />
                     </div>
                 </div>
             </section>

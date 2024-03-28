@@ -1,9 +1,7 @@
 import Header from '@/components/layout/header/Header'
 import './globals.css'
 import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
 import Icon from '@/components/Icon'
-import { useEffect, useState } from 'react'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 
