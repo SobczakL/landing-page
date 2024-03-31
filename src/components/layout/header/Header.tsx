@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { NavItems } from "@/types/types";
 import Link from "next/link";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import SocialLinks from '@/components/SocialLinks';
 
 const pageNavigation: NavItems[] = [
@@ -33,7 +33,6 @@ export default function Header() {
     const [currentURL, setCurrentURL] = useState('');
     const [menuState, setMenuState] = useState(menuItems.Closed);
     const [hoveredLink, setHoveredLink] = useState('');
-    const menuRef = useRef(null);
 
     useEffect(() => {
         const handleRouteChange = (url: string) => {
@@ -48,24 +47,6 @@ export default function Header() {
             router.events.off('routeChangeComplete', handleRouteChange);
         };
     }, [router])
-
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if (menuRef.current?.contains(event.target)) {
-                setMenuState(menuItems.Closed);
-            }
-        }
-
-        if (menuRef.current) {
-            menuRef.current.addEventListener("mousedown", handleClickOutside);
-        }
-
-        return () => {
-            if (menuRef.current) {
-                menuRef.current.removeEventListener("mousedown", handleClickOutside);
-            }
-        };
-    }, [])
 
     const handleMenuSelection = () => {
         setMenuState(prevState => prevState === menuItems.Closed ? menuItems.Opened : menuItems.Closed);
@@ -103,16 +84,24 @@ export default function Header() {
                         style={{
                             transform: menuState === menuItems.Opened ? 'rotate(90deg)' : 'rotate(0)',
                             transition: "transform 0.5s ease",
-                            backgroundColor: menuState === menuItems.Closed ? "inherit" : "white",
                         }}
                     >
-                        <div className="w-1 h-1 bg-black rounded-full" />
-                        <div className="w-1 h-1 bg-black rounded-full" />
+                        <div
+                            className="w-1 h-1 bg-black rounded-full"
+                            style={{
+                                backgroundColor: menuState === menuItems.Closed ? "black" : "white",
+                            }}
+                        />
+                        <div
+                            className="w-1 h-1 bg-black rounded-full"
+                            style={{
+                                backgroundColor: menuState === menuItems.Closed ? "black" : "white",
+                            }}
+                        />
                     </div>
                 </div>
             </section>
             <div
-                ref={menuRef}
                 className='fixed z-20 right-0 overflow-x-hidden box-border rounded-lg h-[92%]'
                 style={{
                     width: `${menuState.width}`,
