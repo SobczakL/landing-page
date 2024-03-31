@@ -3,9 +3,9 @@ import AccordionItem from "@/components/ui/AccordionItem";
 import { useState } from "react";
 
 export default function Projects() {
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-    const handleActiveIndex = (index) => {
+    const handleActiveIndex = (index: number) => {
         setActiveIndex((prevIndex) => (prevIndex === index ? null : index))
     }
 
@@ -36,7 +36,6 @@ export default function Projects() {
             </div>
             <span
                 style={{
-                    // wordWrap: 'break-word',
                     zIndex: 0,
                     pointerEvents: "none"
                 }}
