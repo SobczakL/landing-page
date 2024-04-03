@@ -1,10 +1,10 @@
 import SocialLinks from "@/components/SocialLinks";
 
 const skills = [
-    "HTML/CSS",
-    "JavaScript",
     "TypeScript",
+    "JavaScript",
     "React",
+    "HTML/CSS",
     "Python",
     "MySQL",
     "C",

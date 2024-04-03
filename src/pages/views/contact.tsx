@@ -16,7 +16,7 @@ export default function Contact() {
                 </div>
                 <div className="text-black text-labelSm self-center md:text-labelMd lg:text-labelLg flex flex-col col-span-full md:row-start-2 md:col-start-2 gap-2">
                     <p>For any collaborative projects or inquiries feel free to reach out to me.</p>
-                    <p>lucassobczak3@gmail.com</p>
+                    <p className="hover:underline"><a href="mailto:lucassobczak3@gmail.com">lucassobczak3@gmail.com</a></p>
                 </div>
                 <div className="row-start-4 col-span-full self-center text-black md:row-start-3 md:col-span-2">
                     <SocialLinks />
