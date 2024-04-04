@@ -1,3 +1,3 @@
-# Lucas Sobczak Portfolio 
+# Lucas Sobczak Portfolio
 ---
-lucassobczak.vercel.app
+[Lucas Sobczak](https://lucassobczak.vercel.app/)
